@@ -1,13 +1,21 @@
+import java.util.Scanner;
 
 public class CWH_00_Main {
 
     public static void main(String args[]) {
-        int a = 2;
-        int b = 2;
-        int c = 3;
-        char ch = 'a';
 
-        System.out.println(a + b + c);
+        // float a = 7 / 4.0f * 9 / 2.0f;
+        // System.out.println(a);
+
+        Scanner sc = new Scanner(System.in);
+
+        // char ch = 'B';
+        // // ch = (char) (ch + 8);
+        // System.out.println((char) (ch + 8));
+
+        // sysout
+
+        sc.close();
 
     }
 
