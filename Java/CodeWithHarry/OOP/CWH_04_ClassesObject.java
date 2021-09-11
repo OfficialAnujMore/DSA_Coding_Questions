@@ -16,7 +16,7 @@ class custom_class {
 class CWH_04_ClassesObject {
 
   public static void main(String[] args) {
-    custom_class c1 = new custom_class(); // Instantation
+    custom_class c1 = new custom_class(); // Instantiation
     c1.id = 12;
     c1.name = "Anuj";
     c1.printDetails();

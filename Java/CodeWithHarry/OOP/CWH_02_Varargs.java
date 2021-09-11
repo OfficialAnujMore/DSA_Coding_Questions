@@ -14,5 +14,6 @@ class CWH_02_Varargs {
     System.out.println(foo(2, 3, 4, 5, 6, 7));
     System.out.println(foo(2, 3, 4));
     System.out.println(foo());
+   
   }
 }
