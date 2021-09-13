@@ -26,7 +26,6 @@ class CWH_05_Constructors {
   }
 
   public static void main(String[] args) {
-
     // Constructor can be overloaded
     CWH_05_Constructors c = new CWH_05_Constructors();
 
