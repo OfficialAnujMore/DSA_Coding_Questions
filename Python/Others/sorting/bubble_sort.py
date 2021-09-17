@@ -11,7 +11,9 @@ def bubble_sort(arr):
     return arr
 
 arr = list(map(int, input().split()))
-print(bubble_sort(arr))
+arr = [12,45,1,3,99,223,21123,5553,1,2343]
+bubble = bubble_sort(arr)
+print(bubble)
 '''
 Time complexity 
 Best = O(n)
