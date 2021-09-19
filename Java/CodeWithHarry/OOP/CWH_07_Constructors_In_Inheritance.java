@@ -45,8 +45,8 @@ class Child extends Parent {
 public class CWH_07_Constructors_In_Inheritance {
 
   public static void main(String[] args) {
-    Parent par = new Parent();
+    // Parent par = new Parent();
 
-    Child chi = new Child(12,23);
+    // Child chi = new Child(12,23);
   }
 }

@@ -11,9 +11,9 @@ class CWH_05_Constructors {
     return id;
   }
 
-  public void setName(String na) {
-    this.name = name;
-  }
+  // public void setName(String na) {
+  //   this.name = name;
+  // }
 
   public void setId(int i) {
     id = i;

@@ -30,6 +30,7 @@ class CWH_08_This_Super {
   public static void main(String[] args) {
     Parent p = new Parent(23);
     Child c = new Child(12, 34);
+
     System.out.println(p.getX());
   }
 }
