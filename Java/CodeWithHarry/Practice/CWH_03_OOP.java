@@ -64,7 +64,7 @@ class rect {
   }
 
   public int rectArea() {
-    return width * length
+    return width * length;
   }
 }
 
