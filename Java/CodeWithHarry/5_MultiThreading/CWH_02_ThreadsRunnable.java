@@ -20,11 +20,21 @@ class MythreadRunnable2 implements Runnable {
   }
 }
 
+/*
+New 
+Runnable
+Running
+Terminated
+Blocked 
+
+*/
 public class CWH_02_ThreadsRunnable {
 
   public static void main(String[] args) {
+
     MythreadRunnable1 r1 = new MythreadRunnable1();
     MythreadRunnable2 r2 = new MythreadRunnable2();
+
     Thread t1 = new Thread(r1);
     Thread t2 = new Thread(r2);
     t1.start();
