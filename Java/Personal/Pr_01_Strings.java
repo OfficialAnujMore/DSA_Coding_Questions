@@ -1,3 +1,5 @@
+package Java.Personal;
+
 import java.util.*;
 
 class Pr_01_Strings {

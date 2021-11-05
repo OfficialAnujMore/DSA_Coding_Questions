@@ -1,3 +1,4 @@
+package Java.CodeWithHarry.Practice;
 import java.util.ArrayList;
 
 class Management {
@@ -12,7 +13,8 @@ class Management {
   }
 
   public int displayBook() {
-    return warehouse;
+    // return warehouse;
+    return 2;
   }
 }
 
@@ -21,7 +23,7 @@ class CWH_07_Library {
   public static void main(String[] args) {
     Management mng = new Management();
 
-    mng.warehouse.add(new String[] { "Book1", "Book2", "Book" });
+    // mng.warehouse.add(new String[] { "Book1", "Book2", "Book" });
     System.out.println(mng.displayBook());
   }
 }

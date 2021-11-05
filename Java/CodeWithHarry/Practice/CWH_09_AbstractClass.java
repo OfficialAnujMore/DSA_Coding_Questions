@@ -1,3 +1,4 @@
+package Java.CodeWithHarry.Practice;
 interface BasicAnimal {
   void eat();
   void sleep();

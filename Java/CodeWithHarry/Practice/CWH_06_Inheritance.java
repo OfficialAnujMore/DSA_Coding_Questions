@@ -1,3 +1,4 @@
+package Java.CodeWithHarry.Practice;
 class Animal {
 
   boolean canWalk = true;

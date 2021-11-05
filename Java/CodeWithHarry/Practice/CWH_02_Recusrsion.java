@@ -1,3 +1,4 @@
+package Java.CodeWithHarry.Practice;
 class CWH_02_Recusrsion {
 
   static int natural_num(int n) {

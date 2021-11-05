@@ -1,3 +1,5 @@
+package Java.CodeWithHarry.Practice;
+
 class Thr1 extends Thread {
 
   public Thr1(String name) {
@@ -38,7 +40,7 @@ public class CWH_10_ThreadP2 {
 
     t3.setPriority(7);
     // t2.setPriority(-1); // If negative priority is provided NORM priorities is assigned
-    t2.setPriority(8); 
+    t2.setPriority(8);
     t1.setPriority(Thread.MAX_PRIORITY);
   }
 }
