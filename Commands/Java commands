@@ -1,0 +1,6 @@
+javac -d . CWH_03_ArrayDequeue.java
+java CWH_03_ArrayDequeue.java
+  
+
+javac -d . *.java
+java 

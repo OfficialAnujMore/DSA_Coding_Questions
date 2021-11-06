@@ -1,6 +1,5 @@
-// package Java.CodeWithHarry.J7CollectionFramework;
+package Java.CodeWithHarry.J7CollectionFramework;
 
-import java.util.*;
 import java.util.*;
 
 public class CWH_02_LinkedList {
