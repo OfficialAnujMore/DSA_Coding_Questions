@@ -1,3 +1,4 @@
+package Java.CodeWithHarry.J6ExceptionHandling;
 import java.util.Scanner;
 
 class MyException extends Exception {

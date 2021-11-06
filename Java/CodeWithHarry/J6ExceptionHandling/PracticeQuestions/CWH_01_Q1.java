@@ -1,6 +1,6 @@
 
 
-
+package Java.CodeWithHarry.J6ExceptionHandling.PracticeQuestions;
 
 public class CWH_01_Q1{
     public static void main(String[] args) {
