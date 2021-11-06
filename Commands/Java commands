@@ -1,5 +1,5 @@
-javac -d . CWH_03_ArrayDequeue.java
-java CWH_03_ArrayDequeue.java
+javac -d . CWH_04_Hashing.java
+java CWH_04_Hashing.java
   
 
 javac -d . *.java
