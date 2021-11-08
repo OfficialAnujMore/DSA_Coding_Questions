@@ -1,5 +1,5 @@
-javac -d . CWH_04_Hashing.java
-java CWH_04_Hashing.java
+javac -d . P_01_EvenOdd.java
+java P_01_EvenOdd.java
   
 
 javac -d . *.java
