@@ -9,10 +9,19 @@ class P_01_EvenOdd {
     System.out.print("Enter a number to check ");
     int num = sc.nextInt();
 
-    String result = (num % 2 == 0)
-      ? "Number " + num + " is a even number"
-      : "Number " + num + " is a odd number";
-    System.out.println(result);
+    String normalMethod = (num % 2 == 0)
+      ? "Number " + num + " is a even number using normal method"
+      : "Number " + num + " is a odd number using normal method";
+    System.out.println(normalMethod);
+
+    String bitwiseMethod =
+      (
+        (num ^ 1) == num + 1
+          ? "Number " + num + " is a even number using bitwise operation"
+          : "Number " + num + " is a odd number using bitwise operation"
+      );
+
+    System.out.println(bitwiseMethod);
 
     // if (num % 2 == 0) {
     //   System.out.println("Number " + num + " is a even number");
