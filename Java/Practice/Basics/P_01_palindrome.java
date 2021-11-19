@@ -1,3 +1,5 @@
+package Basics;
+
 import java.util.Scanner;
 
 public class P_01_palindrome {

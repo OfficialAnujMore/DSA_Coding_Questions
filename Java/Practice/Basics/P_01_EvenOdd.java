@@ -1,4 +1,4 @@
-// package classFiles;
+package Basics;
 
 import java.util.Scanner;
 
