@@ -2,7 +2,7 @@ def fibonacci_1(n):
     a = 0
     b = 1
     # print(a, b, end=" ")
-    if n <=1:
+    if n <= 1:
         return n
     else:
         for i in range(2, n+1):
@@ -11,7 +11,7 @@ def fibonacci_1(n):
             a = b
             b = c
 
-    return c
+    return c % 10
 
 
 def fibonacci_2(n):
