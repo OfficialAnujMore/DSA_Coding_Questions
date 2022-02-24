@@ -17,6 +17,6 @@ def gcd1(a, b):
 
     return res
 
-
-# print(gcd1(10, 30))
-print(gcd2(357,234))
+a, b = list(map(int,input().split()))
+# print(gcd1(a, b))
+print(gcd2(a,b))
