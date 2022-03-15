@@ -1,6 +1,3 @@
-from turtle import pos
-
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -94,12 +91,11 @@ class LinkedList:
 
     def deleteAtNth(self, position):
 
-
         if self.head is None:
             return
 
         if position == 0:
-            self.head= self.head.next
+            self.head = self.head.next
             return self.head
 
         index = 0
@@ -114,11 +110,19 @@ class LinkedList:
             else:
                 prev = current
                 current = current.next
-                index+=1
+                index += 1
         prev.next = temp
         return prev
-    
 
+
+    def findLength(self):
+        count = 0
+
+        temp = self.head
+        while (temp):
+            count += 1
+            temp = temp.next
+        print(count)
 
 if __name__ == '__main__':
     llist = LinkedList()
@@ -140,3 +144,5 @@ if __name__ == '__main__':
     llist.printList()
     llist.deleteAtNth(3)
     llist.printList()
+
+    llist.findLength()
