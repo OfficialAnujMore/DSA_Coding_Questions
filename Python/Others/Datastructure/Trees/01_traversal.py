@@ -1,6 +1,3 @@
-from cgi import print_environ
-
-
 class Node:
 
     def __init__(self, key):
