@@ -56,6 +56,7 @@ class Tree:
             else:
                 self.queueTraversal(self.queue[0])
 
+    # O(n)
     def queueTraversalNew(self, root):
         myQueue = []
         if root is None:
