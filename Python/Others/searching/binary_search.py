@@ -1,6 +1,6 @@
-def binary_search(arr,n):
+def binary_search(arr, n):
 
-    s,e = 0, len(arr)
+    s, e = 0, len(nums) - 1
     while (s<=e):
         mid = (s+e)//2
 
@@ -23,7 +23,7 @@ Time complexity
 kth time n/2/k ==> n/2**k
 Therefore timecomplexity is log2(n)
 '''
-#--------------------
+# --------------------
 
 '''
 space complexity: O(1)
