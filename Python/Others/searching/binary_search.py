@@ -1,6 +1,6 @@
 def binary_search(arr, n):
 
-    s, e = 0, len(nums) - 1
+    s, e = 0, len(arr) - 1
     while (s<=e):
         mid = (s+e)//2
 

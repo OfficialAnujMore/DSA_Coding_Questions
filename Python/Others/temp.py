@@ -1,12 +1,21 @@
-def getSum(a, b):
-    mask = 0xffffffff
+def findMin(nums):
+    res = nums[0]
+    l, r = 0, len(nums)-1
 
-    while (b & mask) > 0:
-        carry = (a & b) << 1
-        a = a ^ b
-        b = carry
+    while l <= r:
+        if nums[l] < nums[r]:
+            res = min(res, nums[l])
+            break
+        m = (l+r)//2
 
-    return (a & mask) if b > 0 else a
+        res = min(res, nums[m])
+        if nums[m] >= nums[l]:
+            l = m+1
+        else:
+            r = m - 1
+
+    return res
 
 
-print(getSum(-1, 1))
+arr = [4, 5, 6, 7, 0, 1, 2]
+print(findMin(arr))
