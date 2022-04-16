@@ -1,3 +1,1 @@
-print(14&4)
-
-print(3&1)
+print(12&1)
