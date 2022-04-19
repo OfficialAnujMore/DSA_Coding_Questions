@@ -1,3 +1,4 @@
+# To find number of trailing zeros in n!
 class Solution:
 
     def count(self, n):

@@ -13,10 +13,10 @@ def fastPower(a, b):
 
     res = 1
     while b:
-        if ((b & 1) != 0):  # b %2
+        if ((b & 1) != 0):  # b % 2
             res = res * a
         a = a*a
-        b = b >> 1  # b //2
+        b = b >> 1  # b // 2
 
     return res
 
