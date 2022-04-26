@@ -1,0 +1,60 @@
+Q1. There is one board (snake and ladder board). 100 blocks [1, 100]
+You are in block 1. A normal dice with 6 faces.
+
+[snake_start , snake_end]
+[ladder_start, ladder_end]
+Min steps to reach to block 100 from block 1
+
+
+
+
+Q2. You are given a linked list.
+
+    L0 -> L1 -> ....Ln-1 -> Ln ->
+    L0 Ln L1  L2 ... Ln-2 -> Ln-1-> nu
+          cur 
+          
+L0 Ln L1  Ln-2 L3 ... Ln-3->null
+
+
+    You have to rearrange this list in format :
+        
+    L0 -> Ln -> L1 -> Ln-1 ...
+    
+    1 -> 9-> 10-> 20
+    prev = n-1 
+    
+    1 -> 20 -> 9 -> 10
+    
+    1  5 7 8 9 7 5 9 
+    
+    1 9 5 5 7 7 8 9
+    
+    1 9 9 8 5 7 5 7
+    
+    data 1 and next -> Data 5 next -. data -> 7 
+    cur
+    1. Last elem 
+    2. Store the next of cur
+
+    L0 -> L1 -> ....Ln-1 -> Ln ->
+    L0 Ln L1  L2 ... Ln-2 -> Ln-1-> nu
+Class solutions:
+    
+    def arrange(self, head):
+        brkPnt = head.next.data
+        
+        while (head.next != None):
+            if (head.next.data == brkPnt):
+                break
+            
+            nxt = head.next
+            pre = head
+            
+            if (nxt.next == None):
+                cur = head.next
+                head.next = nxt
+                nxt.next = cur
+    
+        return head
+    
