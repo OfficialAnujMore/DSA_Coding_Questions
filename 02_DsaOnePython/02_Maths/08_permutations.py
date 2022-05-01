@@ -1,20 +1,42 @@
-def permutations(arr):
-
-    finalArr = []
-    resArr = arr
-    i = 0
-    while i < len(arr)-1:
-        if i == len(arr) -2:
-            finalArr.append(resArr)
-            resArr = arr
-        else:
-            temp = resArr[i]
-            resArr[i] = resArr[i+1]
-            resArr[i+1] = temp
-            i+=1
+from itertools import permutations
 
 
-    return finalArr
+def perms(arr):
+    return list(permutations(arr))
 
-arr = [ i for i in range(0,10)]
-print(permutations(arr))
+
+def permsNew(arr):
+    if len(arr) == 0:
+        return []
+    if len(arr) == 1:
+        return [arr]
+
+    res = []
+    for i in range(len(arr)):
+        m = arr[i]
+        remLst = arr[:i] + arr[i+1:]
+        for p in permsNew(remLst):
+            print(p)
+            res.append([m]+p)
+
+    return res
+
+
+def permsRec(arr):
+    result = []
+    if len(arr) == 1:
+        return [arr.copy()]
+
+    for i in range(len(arr)):
+        n = arr.pop(0)
+        perms = permsRec(arr)
+        for perm in perms:
+            perm.append(n)
+        result.extend(perms)
+        arr.append(n)
+
+    return result
+
+
+arr = [i for i in range(1, 4)]
+print(permsRec(arr))
