@@ -1,10 +1,12 @@
-def check(num, mul):
-    print(num, mul)
+nums = [1,2,3,4,5,6,7]
+k = 3
 
-    return mul % num == mul & num-1
+n, k, j = len(nums), k % len(nums), 0
+while n > 0 and k % n != 0:
+    for i in range(0, k):
+        print(nums[j + i], nums[len(nums) - k + i])
+        nums[j + i], nums[len(nums) - k + i] = nums[len(nums) - k + i], nums[j + i] # swap
+    n, j = n - k, j + k
+    k = k % n
 
-
-num = 15
-for i in range(1, 11):
-    print(check(num, num*i))
-
+print(nums)
