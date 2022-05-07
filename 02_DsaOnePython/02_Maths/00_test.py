@@ -1,12 +1,29 @@
-nums = [1,2,3,4,5,6,7]
-k = 3
+def twoSum(nums, target):
+    res = []
+    start = 0
+    end = len(nums)
 
-n, k, j = len(nums), k % len(nums), 0
-while n > 0 and k % n != 0:
-    for i in range(0, k):
-        print(nums[j + i], nums[len(nums) - k + i])
-        nums[j + i], nums[len(nums) - k + i] = nums[len(nums) - k + i], nums[j + i] # swap
-    n, j = n - k, j + k
-    k = k % n
+    mid = len(nums)//2
+    while start < end:
+        diff = target - nums[start]
+        if diff in nums[start+1:end]:
+            print(mid, nums[mid])
 
-print(nums)
+            if nums[mid] == diff:
+                res.append(nums[start])
+                res.append(nums[mid])
+            if nums[mid] > diff:
+                mid = len(nums[mid:])//2
+                end = mid
+            else:
+                mid = len(nums[:mid])//2
+                end = mid
+        else:
+            start += 1
+
+    return res
+
+
+arr = [2, 7, 11, 15]
+n = 9
+print(twoSum(arr, n))

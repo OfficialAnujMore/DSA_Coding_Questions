@@ -6,6 +6,7 @@ class Solution:
     def primes(self, arr):
         # Finding square root
         sqrt = int(len(arr)**0.5)
+        print(sqrt)
         res = []
 
         booleanArray = []
@@ -15,6 +16,8 @@ class Solution:
             for j in range(i+1, len(arr)):
                 if (arr[j] % arr[i]) == 0:
                     booleanArray[j] = False
+
+        print(booleanArray)
         for k in range(0, len(booleanArray)):
             if booleanArray[k] == True:
                 res.append(arr[k])
