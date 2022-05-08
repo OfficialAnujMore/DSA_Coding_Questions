@@ -1,29 +1,23 @@
-def twoSum(nums, target):
-    res = []
-    start = 0
-    end = len(nums)
+# binary search
+from ctypes.wintypes import tagRECT
 
-    mid = len(nums)//2
-    while start < end:
-        diff = target - nums[start]
-        if diff in nums[start+1:end]:
-            print(mid, nums[mid])
 
-            if nums[mid] == diff:
-                res.append(nums[start])
-                res.append(nums[mid])
-            if nums[mid] > diff:
-                mid = len(nums[mid:])//2
-                end = mid
+def twoSum(numbers, target):
+    for i in range(len(numbers)):
+        l, r = i+1, len(numbers)-1
+        tmp = target - numbers[i]
+        while l <= r:
+            print(l,r, (r-l))
+            mid = l + (r-l)//2
+            print(mid)
+            if numbers[mid] == tmp:
+                return [i+1, mid+1]
+            elif numbers[mid] < tmp:
+                l = mid+1
             else:
-                mid = len(nums[:mid])//2
-                end = mid
-        else:
-            start += 1
-
-    return res
+                r = mid-1
 
 
-arr = [2, 7, 11, 15]
-n = 9
-print(twoSum(arr, n))
+arr = [3,24,50,79,88,150,345]
+target = 200
+print(twoSum(arr, target))

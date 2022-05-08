@@ -4,3 +4,9 @@ Math
 - Permutations & combinations
 - Prime numbers in range
 - Matrix operations
+
+Recursion
+- 3 Simple steps.
+1. Find the Base case
+2. Find the relation between problem and subproblems
+3. Generalise the relation.
