@@ -1,14 +1,3 @@
-# def josephusProblem(n,k):
-#     if n == 1:
-#         return 0
-
-#     return (josephusProblem(n-1,k) + k) % n
-
-
-# arr = 5
-# k = 3
-# print('return',josephusProblem(arr,k))
-
 '''
 - Base Josephus problem where in the current player kills the next player
 - If n = 22 find the closed possible square of 2 in this case 16 is closes
@@ -21,8 +10,6 @@
         22 =  1 0 1 1 0
         -->   0 0 1 1 1 == result = 13
 '''
-
-
 def method1(n):
     perfectSqure = 2
     for i in range(n, 0, -1):
