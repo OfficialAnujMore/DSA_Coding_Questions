@@ -1,0 +1,1 @@
+git add . && git commit -m "Common function added" && git push origin master
