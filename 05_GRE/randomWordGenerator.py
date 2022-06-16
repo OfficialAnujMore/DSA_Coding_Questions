@@ -1,6 +1,7 @@
 import random
 
 def genrateWord(wordArr):
+    print(len(wordArr))
     shouldExit = True
     while shouldExit:
         y = input("--------------- Press y to exit ------------------ ")

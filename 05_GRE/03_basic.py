@@ -25,7 +25,30 @@ basic3 = [
     "entice",
     "morose",
     "transitory",
-    "renge"
+    "renge",
+    "disheartened",
+    "ingenuity",
+    "deter",
+    "disenfranchise",
+    "fete",
+    "boon",
+    "malleable",
+    "thwart",
+    "elusive",
+    "incessant",
+    "appreciable",
+    "impermeable",
+    "ornate",
+    "obdurate",
+    "resolve",
+    "raffish",
+    "ascendancy",
+    "degrade",
+    "stolid",
+    "fledging",
+    "dearth",
+    "autonomously",
+    "muted"
 ]
 
 genrateWord(basic3)

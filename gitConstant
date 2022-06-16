@@ -1,1 +1,1 @@
-git add . && git commit -m "Common function added" && git push origin master
+git add . && git commit -m "Basic 3 added" && git push origin master
