@@ -1,6 +1,6 @@
 import random
 
-def genrateWord(wordArr):
+def generateWord(wordArr):
     print(len(wordArr))
     shouldExit = True
     while shouldExit:

@@ -1,4 +1,4 @@
-from randomWordGenerator import genrateWord
+from randomWordGenerator import generateWord
 basic4 = [
     "buck",
     "tumult",
@@ -16,7 +16,15 @@ basic4 = [
     "urbane",
     "irresolute",
     "tawdry",
-    "assail"
+    "assail",
+    "facetious",
+    "genteel",
+    "unruly",
+    "cornucopia",
+    "illicit",
+    "altruism",
+    "grovel",
+    "credence",
 ]
 
-genrateWord(basic4)
+generateWord(basic4)

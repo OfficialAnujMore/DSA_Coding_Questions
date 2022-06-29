@@ -1,4 +1,4 @@
-from randomWordGenerator import genrateWord
+from randomWordGenerator import generateWord
 basic3 = [
     "avid",
     "robust",
@@ -51,4 +51,4 @@ basic3 = [
     "muted"
 ]
 
-genrateWord(basic3)
+generateWord(basic3)
