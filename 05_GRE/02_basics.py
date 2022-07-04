@@ -1,4 +1,5 @@
 from randomWordGenerator import generateWord
+
 basics2 = [
     "beatific",
     "desecrate",
