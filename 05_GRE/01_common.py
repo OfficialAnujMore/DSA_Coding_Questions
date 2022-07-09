@@ -25,7 +25,27 @@ common1 = [
     "amenable",
     "frugal",
     "impertinent",
-    "disinterested"
+    "disinterested",
+    "chastise",
+    "upbraid",
+    "veracious",
+    "extant",
+    "gregarious",
+    "undermine",
+    "parochial",
+    "intimate",
+    "amorphous",
+    "iconoclast",
+    "parsimonious",
+    "venality",
+    "enervate",
+    "calumny",
+    "prevaricate",
+    "vindicate",
+    "galvanize",
+    "censure",
+    "castigate",
+
 ]
 
-generateWord(common1)
+generateWord(common1[32:])
