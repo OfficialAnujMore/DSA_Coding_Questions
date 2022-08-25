@@ -1,57 +1,60 @@
-def dfs(adj, x, visited, stack):
-    # Mark the current node as visited
-    visited[x] = 1
+# python 3
 
-    # Recur for all the vertices adjacent to this vertex
-    for i in range(len(adj[x])):
-        if not visited[adj[x][i]]:
-            visited[adj[x][i]] = 1
-            dfs(adj, adj[x][i], visited, stack)
-
-    # All vertices reachable from x are processed by now, push x to Stack
-    stack.append(x)
+import math
 
 
-def reverseEdges(adj):
-    r_adj = [[] for _ in range(len(adj))]
-    for i in range(len(adj)):
-        for j in range(len(adj[i])):
-            r_adj[adj[i][j]].append(i)
-    return r_adj
+class MinimumLength:
+    def __init__(self, n, edges):
+        self.parent = [i for i in range(n)]
+        self.rank = [0] * n
+        self.edges = edges
 
+    def Find(self, i):
+        if i != self.parent[i]:
+            self.parent[i] = self.Find(self.parent[i])
+        return self.parent[i]
 
-def number_of_strongly_connected_components(adj):
-    result = 0
-    stack = []
+    def Union(self, i, j):
+        i_parent = self.Find(i)
+        j_parent = self.Find(j)
+        if i_parent == j_parent:
+            return
+        else:
+            if self.rank[i_parent] > self.rank[j_parent]:
+                self.parent[j_parent] = i_parent
+            else:
+                self.parent[i_parent] = j_parent
+                if self.rank[i_parent] == self.rank[j_parent]:
+                    self.rank[j_parent] += 1
 
-    # Mark all the vertices as not visited (For first DFS)
-    visited = [0] * len(adj)
-
-    # Fill vertices in stack according to their finishing times
-    for i in range(len(adj)):
-        if not visited[i]:
-            dfs(adj, i, visited, stack)
-
-    # get the reversed adj list
-    r_adj = reverseEdges(adj)
-
-    # Mark all the vertices as not visited (For second DFS)
-    visited = [0] * len(adj)
-
-    # Now process all vertices in order defined by Stack
-    while stack:
-        x = stack.pop()
-        if not visited[x]:
-            dfs(r_adj, x, visited, [])
-            result += 1
-    return result
+    def Kruskal(self):
+        dist = 0
+        self.edges.sort(key=lambda i: i[2])
+        for u, v, w in edges:
+            if self.Find(u) != self.Find(v):
+                dist += w
+                self.Union(u, v)
+        return dist
 
 
 if __name__ == '__main__':
-    n, m = map(int, input().split())
-    adj = [[] for _ in range(n)]
-    for i in range(m):
+    n_vertices = int(input())
+
+    points = [None] * n_vertices
+
+    for i in range(n_vertices):
         a, b = map(int, input().split())
-        # adjacency list
-        adj[a - 1].append(b - 1)
-    print(number_of_strongly_connected_components(adj))
+        points[i] = (a, b)
+
+    edges = []
+
+    for i in range(n_vertices):
+        (x0, y0) = points[i]
+        for j in range(i+1, n_vertices):
+            (x1, y1) = points[j]
+            distance = math.sqrt((x1 - x0)**2 + (y1 - y0)**2)
+            edges.append((i, j, distance))
+
+    graph = MinimumLength(n_vertices, edges)
+    min_length = graph.Kruskal()
+    print("{0:.9f}".format(min_length))
